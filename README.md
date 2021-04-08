@@ -26,15 +26,62 @@ icone.setAttribute("class", "icon icon-youtube-header icon--small icon--hover-yo
 
 youtube.append(icone);
 elemento.appendChild(youtube);
+```
 
+2) Modifique o comportamento do menu Whatsapp
 ```
 
 
-2)
+```
 
+3) Modifique o formulário de "Estou Interessado" em https://testes.autoforce.com.br/autoforce-ford/novos/territory
+```
+let elementos = document.getElementsByTagName("fieldset");
 
+var divSelect = document.createElement("div");
+divSelect.setAttribute("class", "form-group");
 
-3)
+var mySelect= document.createElement("select");
+mySelect.setAttribute("class", "form-control");
+var myOption = document.createElement("option");
+myOption.value = "";
+myOption.text = "Selecione um veículo";
+mySelect.append(myOption);
+var myOption = document.createElement("option");
+myOption.value = "SUV";
+myOption.text = "SUV";
+mySelect.append(myOption);
+myOption = document.createElement("option");
+myOption.value = "Senda";
+myOption.text = "Senda";
+mySelect.append(myOption);
+myOption = document.createElement("option");
+myOption.value = "Hatch";
+myOption.text = "Hatch";
+mySelect.append(myOption);
+myOption = document.createElement("option");
+myOption.value = "Pickup";
+myOption.text = "Pickup";
 
+mySelect.append(myOption);
+divSelect.appendChild(mySelect);
+elementos[1].appendChild(divSelect);
 
-4)
+// Criação do textarea
+var divText= document.createElement("div");
+divText.setAttribute("class", "form-group");
+
+var myText= document.createElement("textarea");
+myText.setAttribute("placeholder", "Mensagem");
+
+myText.setAttribute("maxlength", "500");
+divText.appendChild(myText);
+
+elementos[1].appendChild(divText);
+
+```
+
+4) Exiba um modal com o escudo do Palmeiras
+```
+
+```
