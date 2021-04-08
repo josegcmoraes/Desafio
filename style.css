@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: Futura, 'Poppins', Arial, sans-serif;
+}
+
+:root {
+  --unnamed-color-ffffff: #FFFFFF;
+  --unnamed-color-edede3: #EDEDE3;
+  --unnamed-color-d0ced1: #D0CED1;
+  --unnamed-color-ff1430: #FF1430;
+  --unnamed-color-2fb640: #2FB640;
+  --unnamed-color-dddddd: #DDDDDD;
+  --unnamed-color-2b222f: #2B222F;
+  --unnamed-color-433b47: #433B47;
+  --unnamed-color-726c75: #726C75;
+}
+
+body {
+  background: #2B222F;
+  /* height: 726px; */
+}
+
+/* Estilização do navbar da página */
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  top: 0px;
+  left: 0px;
+  width: 320px;
+  height: 60px;
+  background: #18131F 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 4px #0000000D;
+  opacity: 1;
+}
+
+/* Estilização do botão que habilita e desabilita o sidebar  */
+.btn{
+  /* position: absolute; */
+  top: 15px;
+  left: 0;
+  height: 45px;
+  width: 45px;
+
+  text-align: center;
+  background: #1b1b1b;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+}
+
+/* .btn.click{
+  left: 260px;
+} */
+/* Estilização das 3 linhas do botão de acesso ao sidebar */
+.btn span{
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+/* Muda as 3 linhas pelo X para sair do sidebar */
+.btn.click span:before{
+  content: '\f00d';
+}
+
+/* Estilização da logo do site na navbar */
+.logo-site {
+  top: 21px;
+  left: 52px;
+  width: 109px;
+  height: 22px;
+  background: transparent url('assets/logo-site.svg') 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+/* Estilização do telefone na navbar círculo */
+.telefone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  top: 17px;
+  left: 178px;
+  width: 35px;
+  height: 35px;
+  /* Tamanho aumentado de 30px para 35px largura e altura estava cortando  */
+
+  background: transparent url('assets/elipse2.svg') 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px #E4195526;
+  opacity: 1;
+}
+/* Estilização do telefone na navbar ícone */
+.telefone #logo-telefone {
+  top: 25px;
+  left: 186px;
+  width: 14px;
+  height: 13px;
+
+  background: transparent url('assets/telefone.svg') 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+/* Estilização do whatsapp na navbar círculo */
+.whatsapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  top: 17px;
+  left: 218px;
+  width: 35px;
+  height: 35px;
+  /* Tamanho aumentado de 30px para 35px largura e altura estava cortando  */
+
+  background: transparent url('assets/elipse2.svg') 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px #4EC85926;
+  opacity: 1;
+}
+/* Estilização do whatsapp na navbar ícone */
+.whatsapp #logo-whatsapp {
+  top: 23px;
+  left: 224px;
+  width: 18px;
+  height: 18px;
+
+  background: transparent url('assets/whatsapp.svg') 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+/* Estilização da logo fiat na navbar */
+.logo-fiat {
+  top: 21px;
+  left: 265px;
+  width: 35px;
+  height: 22px;
+
+  /* url('assets/logo-fiat.png') */
+  background: transparent 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+
+
+/* ESTILIZAÇÃO DO SIDEBAR */
+.sidebar{
+  position: absolute;
+  top: 63px;
+  left: -320px;
+  width: 320px;
+  height: 540px;
+  
+  background: #433B47 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 4px #00000026;
+  opacity: 1;
+
+  transition: left 0.4s ease;
+}
+/* Permite que a sidebar seja exibida na tela */
+.sidebar.show{
+  left: 0px;
+}
+/* Fundo sidebar */
+nav ul{
+  background: #433B47 0% 0% no-repeat padding-box;
+
+  height: 100%;
+  width: 100%;
+  list-style: none; 
+}
+/* Os elementos da sidebar */
+nav ul li{
+  line-height: 50px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0px 2px 4px #00000026;
+  opacity: 1;
+}
+  
+/* nav ul li:nth-child(n+1) {
+  margin-right: 17px;
+  margin-left: 17px;
+} */
+
+/* Define a estilização para a borda do último elemento */
+nav ul li:last-child{
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Elemento do sidebar */
+nav ul li a{
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 15px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  background: #433B47 0% 0% no-repeat padding-box;
+}
+
+/* Elemento do sidebar ativado */
+nav ul li.active a{
+  background: #FF1430 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 4px #00000026;
+  opacity: 1;
+}
+
+/* Elemento do sidebar que o úsuario está interagindo */
+nav ul li a:hover{
+  background: #FF1430 0% 0% no-repeat padding-box;
+}
+/* Parte interna do submenu da navbar */
+nav ul ul{
+  /* padding-right: 17px; */
+  position: static;
+  display: none;
+  background: #433B47 0% 0% no-repeat padding-box;
+}
+/* Mostrar submenu */
+nav ul .feat-show.show{
+  display: block;
+}
+/* Os elementos do submenu da sidebar */
+nav ul ul li{
+  line-height: 42px;
+  display: flex;
+  flex-direction: flex-start;
+  align-items: center;
+  margin-left: 42px;
+
+  /* border-top: none; */
+  box-shadow: 0px 2px 4px #00000026;
+  opacity: 1;
+}
+/* Elemento do submenu da sidebar */
+nav ul ul li a{
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 0px;
+  /* box-shadow: 0px 2px 4px #000; */
+  /* opacity: 1; */
+}
+/* conteúdo do sub-menu da sidebar */
+nav ul li.active ul li a{
+  color: #e6e6e6;
+  /* background: #1b1b1b; */
+  background: #433B47 0% 0% no-repeat padding-box;
+  border-left-color: transparent;
+}
+/* hover do elemento do subemenu da sidebar selecionado */
+nav ul ul li a:hover{
+  color: cyan!important;
+  background: #FF1430 0% 0% no-repeat padding-box!important;
+}
+/* aviso para novas categorias */
+nav ul li a .novidades{
+  /* position: ; */
+  top: 50%;
+  margin-left: 9px;
+
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0px;
+
+  height: 20px;
+  width: 40px;
+  background: transparent url('assets/retangulo17.svg') 0% 0% no-repeat padding-box;
+  /* background: red; */
+  justify-content: center;
+  padding: 2px 6px 2px 6px;
+  border-radius: 7px;
+  opacity: 1;
+}
+/* Estilização span com a seta para o submenu */
+nav ul li a .fas{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+/* Estilização do rotacionamento da seta que existe no span do submenu */
+nav ul li a span.rotate{
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+
+
+/* Estilização da página de fundo banner do carro */
+.banner {
+  /* position: fixed; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: 50px;
+  height: 320px;
+
+  color: #202020;
+  background: #2B222F;
+  text-align: center;
+  z-index: 0;
+}
+
+/* Bloco com a linha colorida e botão ver todos os modelos */
+.container {
+  left: 0;
+  top: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: block;
+  position: -ms-page;
+
+  bottom: 530px;
+  background: #2B222F 0% 0% no-repeat padding-box;
+  background: blue;
+  z-index: -2;
+}
+/* Estilização linha colorida, na parte inferior da página */
+.container .linha-colorida {
+  position: relative;
+  height: 15px;
+  width: 290px;
+  margin-right: 8px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  margin-top: 228px;
+}
+/* Estilização do botão ver todos os modelos */
+.container button {
+  position: unset;
+  left: 12px;
+  width: 291px;
+  height: 50px;
+  margin-left: 12px;
+  margin-right: 17px;
+  margin-bottom: 29px;
+
+  /* background: black; */
+  background: #2B222F 0% 0% no-repeat padding-box;
+  color: #edede3;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0;
+  opacity: 1;
+
+  border: 1px solid red;
+  opacity: 1;
+}
+/* Estilização do whatsapp flutuante */
+.whatsapp-big {
+  position: fixed;
+  bottom: -37px;
+  height: 493px;
+  margin-left: 251px;
+  margin-right: 10px;
+  display: flex;
+  align-items: flex-end;
+  /* justify-content: flex-end; */
+  /* flex-direction: flex-end; */
+  z-index: -1;
+  margin-bottom: 50px;
+}
+/* Estilização do whatsapp flutuante imagem */
+.whatsapp-big img {
+  height: 59px;
+  width: 59px;
+}
+

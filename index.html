@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>auto</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="btn">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo-site">
+            <img src="/assets/logo-site.svg" alt="logo">
+        </div>
+        <div class="telefone">
+            <div id="logo-telefone"></div>
+        </div>
+        <div class="whatsapp">
+            <div id="logo-whatsapp"></div>
+        </div>
+        <div class="logo-fiat">
+            <img src="/assets/logo-fiat.svg" alt="logo-fiat">
+        </div>
+    </nav>
+    
+    <nav class="sidebar">
+        <!-- <div class="text">Side Menu</div> -->
+        <ul>
+            <li>
+                <a href="#" class="feat-btn">Institucional
+                    <span class="submenu fas fa-caret-down first"></span>
+                </a>
+                <ul class="feat-show">
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Endereços</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Novos</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Seminovos</a></li>
+            <li><a href="#">Consórcio <span class="novidades">Novo</span></a></li>
+            <li><a href="#">Vendas Direta</a></li>
+            <li><a href="#">Lifestyle</a></li>
+            <li><a href="#">Pós-vendas</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="banner-item">
+            <img src="/assets/banner/banner-mobile.png" alt="banner">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="linha-colorida">
+            <div id="linha"></div>
+            <img src="/assets/linha-colorida.svg" alt="linha-colorida">
+        </div>
+        <button type="menu">Ver todos os modelos</button>
+    </div>
+    <div class="whatsapp-big">
+        <img src="/assets/whatsapp-big.svg" alt="whatsapp">
+    </div>
+    
+    <script>
+        // Habilitar e Desabilitar o botão de acesso ao side bar e exibir o sidebar
+        $('.btn').click(function(){
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+        });
+        // Habilitar o rotacionamento do botão do submenu da sidebar e exibir o submenu
+        $('.feat-btn').click(function(){
+            $('nav ul .feat-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+        // $('.serv-btn').click(function(){
+            // $('nav ul .serv-show').toggleClass("show1");
+            // $('nav ul .second').toggleClass("rotate");
+        // });
+        // Selecionar o elemento ativo na sidebar
+        $('nav ul li').click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+
+  </body>
+</html>
