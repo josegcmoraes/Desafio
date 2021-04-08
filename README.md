@@ -82,6 +82,15 @@ elementos[1].appendChild(divText);
 ```
 
 4) Exiba um modal com o escudo do Palmeiras
+(OBS: Criei o botão mais não consegui fazer o model)
 ```
+let elementos = document.querySelector('.showcase__buttons');
 
+var botao = document.createElement('button');
+botao.innerHTML = ('<button data-scroll-to=".abrirModal" class="btn button button--large button--primary">Palmeiras </button>')
+elementos.appendChild(botao);
+
+var modal = document.createElement('img');
+modal.innerHTML = ('<img class="abrirModal" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fb5%2Fc3%2F1e%2Fb5c31e3cd59dc782c1ea6d2a07242052.jpg&imgrefurl=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F356699232971296733%2F&tbnid=Ps171Z5SQfibsM&vet=12ahUKEwidwMiQte_vAhUviJUCHayYDkEQMygAegUIARDaAQ..i&docid=Ovll1uIbSd316M&w=630&h=354&q=escudo%20palmeiras&ved=2ahUKEwidwMiQte_vAhUviJUCHayYDkEQMygAegUIARDaAQ"
+alt="palmeiras"/>');
 ```
