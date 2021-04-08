@@ -10,6 +10,7 @@ abrir o arquivo .html no navegador,
   abrir toggle device toolbar ctrl + shift + m
   selecionar iphone5s
 )
+obs: usei uma fonte sem ser a FUTURA PT, visto que ela não está disponível gratuitamente no google fonts
 
 Exercícios Manipulação da DOM
 
